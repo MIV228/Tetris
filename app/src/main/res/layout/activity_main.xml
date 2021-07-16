@@ -5,49 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/topMargin"
+        android:layout_marginBottom="@dimen/bottomMargin"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/topMargin"
-        android:layout_marginBottom="@dimen/bottomMargin"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TETRIS"
-            android:textSize="80sp"/>
+            android:text="@string/game_name"
+            android:textColor="@color/black"
+            android:textSize="80sp" />
+
         <TextView
             android:id="@+id/tv_high_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="High score: 0"
-            android:textSize="20sp"
-            android:layout_marginTop="@dimen/topMargin"/>
+            android:layout_marginTop="@dimen/topMargin"
+            android:text="@string/high_score"
+            android:textSize="20sp" />
+
         <LinearLayout
+            android:id="@+id/linear"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <Button
                 android:id="@+id/btn_new_game"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New game"/>
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue"
+                android:text="@string/new_game" />
+
             <Button
                 android:id="@+id/btn_reset_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Reset score"/>
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue"
+                android:text="@string/reset_score" />
+
             <Button
                 android:id="@+id/btn_exit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="exit"/>
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue"
+                android:text="@string/exit" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
